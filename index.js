@@ -9,6 +9,10 @@ connectToMongo();
 const app = express();
 const port = process.env.PORT || 5000;
 
+app.get('/', (req, res) => {
+  res.send('Welcome to iNotebook backend!');
+});
+
 // Middleware
 app.use(cors({
     origin: "*" // Security साठी नंतर frontend URL टाक
