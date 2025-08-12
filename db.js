@@ -1,6 +1,8 @@
 const mongoose = require('mongoose');
 require('dotenv').config();
 
+mongoose.set('strictQuery', false);  // Deprecation warning 
+
 const connectToMongo = async () => {
     try {
         await mongoose.connect(process.env.MONGO_URI, {
